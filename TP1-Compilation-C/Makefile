@@ -1,8 +1,9 @@
-all:
+make:
 	gcc -c *.c *.h
-	gcc -o hello hello.o
+	gcc -o hello *.o
 	./hello
 	
 clean:
 	rm -f *.gch *.o hello
 
+all: clean make
