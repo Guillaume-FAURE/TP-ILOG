@@ -17,7 +17,7 @@
 ## Livrables
 - hello
     - hello.c
-    - hello.i
+    - *.h
     - Makefile
 - cutest-1.5
     - Makefile
