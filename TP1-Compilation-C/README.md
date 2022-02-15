@@ -1,4 +1,4 @@
-# ILOGD TP1
+# ILOG TP1 : Compilation en C
 ## Objectifs
 - maîtriser la compilation séparée C ;
 - maîtriser la modularité renforcée ;
