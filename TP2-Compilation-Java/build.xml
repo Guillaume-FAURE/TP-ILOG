@@ -1,0 +1,14 @@
+<project default="compile" basedir=".">
+
+	<target name="compile">
+		<javac	destdir="bin"
+			includes="HelloJava.java"
+			srcdir="src"
+			includeantruntime="false" 
+		/>
+	</target>
+	<target name="run" depends="compile">
+		<java fork="true" classpath="./bin/" classname="HelloJava"></java>
+	</target>
+
+</project>
