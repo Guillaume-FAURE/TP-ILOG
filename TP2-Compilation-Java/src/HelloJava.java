@@ -1,9 +1,12 @@
 public class HelloJava{
-	static void helloWorld(){
-		System.out.println("Hello World!\n");
-	}
+
 
 	public static void main(String[] args){
-		helloWorld();
+		Message instance = new Message();
+		String sentence = "Guillaume FAURE"; 
+		instance.display();
+		instance.display(sentence);
+		//Use ant run -Darg0='yourSentence' to add arguments
+		instance.display(args[0]);
 	}
 }
