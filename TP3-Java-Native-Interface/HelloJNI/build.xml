@@ -1,0 +1,21 @@
+<project default="makejavaheaders" basedir=".">
+
+	<target name="compile">
+		<javac 
+            destdir="bin" 
+            includes="*.java" 
+            srcdir="src" 
+            includeantruntime="false"
+        />
+	</target>
+
+	<target name="makejavaheaders" depends="compile">
+		<exec executable="javac">
+			<arg value="-h" />
+			<arg value="../HelloNative" />
+			<arg value="-sourcepath" />
+			<arg value="src" />
+			<arg value="src/Display.java" />
+		</exec>
+	</target>
+</project>
