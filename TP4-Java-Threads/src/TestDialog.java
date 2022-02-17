@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class TestDialog {
     public static void main(String[] args) {
 		Thread thrCur = Thread.currentThread();
@@ -9,11 +11,11 @@ public class TestDialog {
 		try {
 			System.in.read(); // wait for enter key
 			thrDlg.interrupt();
-		} catch (Exception e) {
+			thrDlg = new Thread(dlg);
+			thrDlg.start();
+		} 
+		catch (IOException e) {
 		}
-        while (true) {
-			System.out.printf("%s : looping in TestDialog#main\n", name);
-		}
-		// System.out.printf("%s leaving TestDialog#main\n", name);
+		System.out.printf("%s leaving TestDialog#main\n", name);
 	}
 }
