@@ -1,4 +1,4 @@
-public class Dialog implements Runnable {
+public class Dialog implements java.lang.Runnable {
     @Override
     public void run(){
         Thread thrCur = Thread.currentThread();
