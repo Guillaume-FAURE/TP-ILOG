@@ -6,7 +6,11 @@ public class TestDialog {
 		Dialog dlg = new Dialog();
 		Thread thrDlg = new Thread(dlg);
 		thrDlg.start();
-        dlg.run();
+		try {
+			System.in.read(); // wait for enter key
+			thrDlg.interrupt();
+		} catch (Exception e) {
+		}
         while (true) {
 			System.out.printf("%s : looping in TestDialog#main\n", name);
 		}
