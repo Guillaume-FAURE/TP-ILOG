@@ -4,6 +4,8 @@ public class TestDialog {
 		String name = thrCur.getName();
 		System.out.printf("%s : entering TestDialog#main\n", name);
 		Dialog dlg = new Dialog();
+		Thread thrDlg = new Thread(dlg);
+		thrDlg.start();
         dlg.run();
         while (true) {
 			System.out.printf("%s : looping in TestDialog#main\n", name);
